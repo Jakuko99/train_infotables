@@ -23,12 +23,12 @@ def index_page(request: Request) -> HTMLResponse:
 
 @app.get("/favicon.ico")
 def get_favicon():
-    return FileResponse(f"{current_path}/favicon.ico")
+    return FileResponse(f"{current_path}/assets/favicon.ico")
 
 
 @app.get("/file/{filename}")
 def get_file(filename: str):
-    return FileResponse(f"{current_path}/{filename}")
+    return FileResponse(f"{current_path}/assets/{filename}")
 
 
 @app.get("/station_raw/{station_name}")
