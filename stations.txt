@@ -1,0 +1,281 @@
+159467>Aleksince
+158162>Bajc
+152165>Banov
+151464>Banovce nad Bebravou
+166900>Banovce nad Ondavou
+133637>Banska Bystrica
+146233>Banska Stiavnica
+152900>Barca
+165902>Bardejov
+131532>Bartosova Lehotka
+132464>Bernolakovo
+156463>Besa
+137836>Blhovce
+142463>Boleraz
+155267>Bosany
+132068>Bratislava hlavna stanica
+145169>Bratislava predmestie
+131664>Bratislava-Lamac
+146167>Bratislava-Nove Mesto
+145763>Bratislava-Petrzalka
+136069>Bratislava-Raca
+132167>Bratislava-Vajnory
+148338>Breznicka
+143537>Brezno
+143636>Brezno mesto
+172056>Bystricany
+173658>Bytca
+175356>Bytcica
+181156>Cadca
+163261>Cata
+152009>Cecejovce
+186403>Celovce
+145433>Cervena Skala
+138602>Cierna nad Tisou
+181453>Cierne pri Cadci
+131367>Devinska Nova Ves
+130534>Diviaky
+175950>Dlha nad Oravou
+161109>Dlhe nad Cirochou
+138701>Dobra
+147736>Dobra Niva
+174052>Dolny Hricov
+174250>Dolny Kubin
+157107>Drienovska Nova Ves
+170159>Dubnica nad Vahom
+142539>Dubova
+147363>Dunajska Streda
+134460>Dvory nad Zitavou
+136937>Filakovo
+158360>Chotin
+172957>Chrenovec
+151969>Chynorany
+136663>Cifer
+133264>Galanta
+150169>Gan
+143834>Gasparovo
+134866>Gbelce
+143065>Gbely
+149500>Gelnica
+137539>Hajnacka
+173153>Handlova
+152801>Haniska pri Kosiciach
+158709>Hanusovce nad Toplou
+144832>Helpa
+140939>Hlinik nad Hronom
+159061>Hlohovec
+152231>Hnusta
+143263>Holic nad Moravou
+146837>Hontianske Nemce
+130930>Horna Stubna
+144667>Horne Srnie
+131839>Hronska Dubrava
+140137>Hronsky Benadik
+156166>Hul
+160408>Humenne
+158261>Hurbanovo
+158360>Chotin
+172957>Chrenovec
+151969>Chynorany
+170258>Ilava
+152769>Ivanka pri Nitre
+141663>Jablonica
+154062>Jelsovce
+138032>Jesenske
+156968>Kalna nad Hronom
+160804>Kamenica nad Cirochou
+158006>Kapusany pri Presove
+142307>Kezmarok
+149435>Kokava nad Rimavicou
+149062>Komarno
+152462>Komjatice
+154161>Koniarovce
+136002>Kosice
+161505>Koskovce
+135806>Kostolany nad Hornadom
+157560>Kozarovce
+131615>Kralova Lehota
+174755>Kralovany
+136606>Krasna nad Hornadom
+182154>Krasno nad Kysucou
+131235>Kremnica
+131334>Kremnicke Bane
+135236>Krivan
+134601>Krompachy
+147132>Krupina
+130161>Kuty
+137406>Kuzmice
+146662>Kvetoslavov
+135608>Kysak
+182451>Kysucke Nove Mesto
+170456>Ladce
+147066>Lehnice
+138735>Lenartovce
+137166>Leopoldov
+157164>Levice
+157206>Licartovce
+175059>Lietavska Lucka
+164103>Lipany
+158600>Lipniky
+130815>Liptovska Tepla
+131417>Liptovsky Hradok
+131011>Liptovsky Mikulas
+156760>Lok
+135533>Lovinobana
+136135>Lucenec
+154567>Ludanice
+175455>Luky pod Makytou
+153361>Luzianky
+182758>Makov
+135301>Mala Lodina
+130864>Malacky
+161463>Mana
+134908>Margecany
+133900>Markusovce
+130138>Martin
+142000>Matejovce pri Poprade
+142232>Medzibrod
+176255>Medzibrodie nad Oravou
+162206>Medzilaborce
+137505>Michalany
+167304>Michalovce
+148809>Mnisek nad Hnilcom
+151704>Moldava nad Bodvou
+135160>Muzla
+143768>Myjava
+148304>Nalepkovo
+144766>Nemsova
+153064>Nitra
+136804>Nizna Mysla
+159905>Nizny Hrabovec
+140335>Nova Bana
+172353>Novaky
+146563>Nove Kosariska
+138164>Nove Mesto nad Vahom
+134361>Nove Zamky
+175851>Oravsky Podzamok
+147264>Orechova Poton
+155861>Oslany
+134163>Palarikovo
+176354>Parnica
+167502>Petrovce nad Laborcom
+136267>Pezinok
+137463>Piestany
+143909>Plavec
+150102>Plesivec
+176651>Podbiel
+142935>Podbrezova
+156265>Podhajska
+143206>Podolinec
+146266>Podunajske Biskupice
+163162>Pohronsky Ruskov
+144337>Polomka
+148932>Poltar
+132506>Poprad-Tatry
+176958>Povazska Bystrica
+177154>Povazska Tepla
+149302>Prakovce
+157503>Presov
+138503>Pribenik
+134569>Pribeta
+172551>Prievidza
+177253>Puchov
+134031>Radvan
+161901>Radvan nad Laborcom
+177451>Rajec
+165506>Raslavice
+152934>Rimavska Bana
+150334>Rimavska Sobota
+159269>Risnovce
+150607>Roznava
+137109>Ruskov
+130419>Ruzomberok
+151662>Rybany
+147538>Sasa-Pliesovce
+130468>Sekule
+132761>Senec
+141366>Senica
+149864>Sered
+143669>Skalica na Slovensku
+183053>Skalite
+173559>Sklene pri Handlovej
+132969>Sladkovicovo
+137208>Slanec
+134437>Sliac kupele
+142034>Slovenska Lupca
+137901>Slovenske Nove Mesto
+142166>Smolenice
+163006>Snina
+133603>Spisska Nova Ves
+134205>Spisske Vlachy
+163402>Stakcin
+143503>Stara Lubovna
+144063>Stara Tura
+140509>Stary Smokovec
+135137>Stozok
+160101>Strazske
+138107>Streda nad Bodrogom
+134668>Strekov
+132308>Svit
+154047>Sahy
+133363>Sala
+157800>Sarisske Luky
+141168>Sastin-Straze
+142760>Selpice
+136465>Senkvice
+132001>Strba
+140319>Strbske Pleso
+135269>Sturovo
+152066>Surany
+141705>Tatranska Lomnica
+151837>Tisovec
+136036>Tomasovce
+155069>Topolcany
+139030>Tornala
+166405>Trebisov
+138867>Trencianska Tepla
+150862>Trencianska Turna
+138263>Trencianske Bohuslavice
+139261>Trencianske Teplice
+138669>Trencin
+138461>Trencin-Zlatovce
+136762>Trnava
+133868>Trnovec nad Vahom
+177956>Trstena
+178251>Turany
+151407>Turna nad Bodvou
+183459>Turzovka
+178459>Tvrdosin
+134064>Tvrdosovce
+161307>Udavske
+149732>Utekac
+156067>Ulany nad Zitavou
+166207>Upor
+178657>Varin
+152504>Velka Ida
+155465>Velke Bielice
+157263>Velke Kozmalovce
+130666>Velke Levare
+155762>Velke Uherce
+138404>Velky Hores
+134734>Viglas
+134239>Vlkanova
+161869>Vrable
+159400>Vranov nad Toplou
+164863>Vrbovce
+178954>Vrutky
+188953>Vrutky nakladna stanica
+131714>Vychodna
+133108>Vydrnik
+153569>Zbehy
+172155>Zemianske Kostolany
+161166>Zlate Moravce
+149534>Zlatno
+130963>Zohor
+132332>Zvolen nakladna stanica
+132233>Zvolen osobna stanica
+155366>Zabokreky nad Nitrou
+140632>Zarnovica
+162966>Zeliezovce
+141234>Ziar nad Hronom
+179150>Zilina

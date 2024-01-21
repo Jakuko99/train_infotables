@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ŽSR InfoTables</title>
+</head>
+
+<style>
+    img {
+        max-width: 100%;
+        outline: none;
+        border: none;
+    }
+
+    form {
+        text-align: center;
+    }
+
+    body {
+        background-color: #1e1848;
+        color: white;
+    }
+</style>
+
+<script>
+    function viewStation() {
+        var e = document.getElementsByTagName("select")[0];
+        var station = e.options[e.selectedIndex].value;
+        var table_type = document.querySelector('input[name="table_type"]:checked').value;
+        if (table_type == "ARRIVALS") {
+            window.location.href = "/station/" + station + "?type=1";
+        } else {
+            window.location.href = "/station/" + station + "?type=2";
+        }
+    }
+</script>
+
+<body>
+    <img src="file/header.png" alt="ŽSR logo" height="400">
+    <h1 style="text-align: center;">Informačné tabule</h1>
+    <form method="POST">
+        <select>
+            {% for enum_value in enum_values %}
+            <option value="{{ enum_value }}">{{ enum_value }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <input type="radio" id="departures" name="table_type" value="DEPARTURES" checked="checked">
+        <label for="departures">Odchody</label>
+        <input type="radio" id="arrivals" name="table_type" value="ARRIVALS">
+        <label for="arrivals">Príchody</label>
+        <br>
+        <br>
+        <button type="button" onclick="viewStation()">Zobraziť</button>
+    </form>
+</body>
+
+</html>
