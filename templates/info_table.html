@@ -10,9 +10,15 @@
     function returnToList() {
         window.location.href = "/";
     }
+
+    function refreshPage() {
+        setInterval(function() {
+            window.location.reload();
+        }, 30000);
+    }
 </script>
 
-<body>
+<body onload="refreshPage()">
     <table></table>
     <form style="text-align: center;">
         <button type="button" onclick="returnToList()">Úvodná stránka</button>
