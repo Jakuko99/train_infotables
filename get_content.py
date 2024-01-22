@@ -154,7 +154,7 @@ def parse_infotable(
             color: #ffd800;
             font-size: {font_size}px;
             width: 100%;       
-            text-align: center;     
+            text-align: center;   
         }}
 
         table tr:first-child {{

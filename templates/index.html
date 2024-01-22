@@ -8,7 +8,6 @@
 
 <style>
     img {
-        max-width: 100%;
         outline: none;
         border: none;
     }
@@ -19,7 +18,7 @@
 
     body {
         background-color: #1e1848;
-        color: white;
+        color: #ffffff;
     }
 </style>
 
@@ -29,9 +28,9 @@
         var station = e.options[e.selectedIndex].value;
         var table_type = document.querySelector('input[name="table_type"]:checked').value;
         if (table_type == "ARRIVALS") {
-            window.location.href = "/station/" + station + "?type=1";
+            window.location.href = "/station/" + station + "?type=1" + "&font_size=" + document.querySelector('input[name="font_size"]').value;
         } else {
-            window.location.href = "/station/" + station + "?type=2";
+            window.location.href = "/station/" + station + "?type=2" + "&font_size=" + document.querySelector('input[name="font_size"]').value;
         }
     }
 </script>
@@ -50,6 +49,9 @@
         <label for="departures">Odchody</label>
         <input type="radio" id="arrivals" name="table_type" value="ARRIVALS">
         <label for="arrivals">Príchody</label>
+        <br>
+        <label for="font_size">Veľkosť písma:</label>
+        <INPUT TYPE="NUMBER" MIN="10" MAX="100" STEP="5" VALUE="20" SIZE="6" name="font_size">
         <br>
         <br>
         <button type="button" onclick="viewStation()">Zobraziť</button>
