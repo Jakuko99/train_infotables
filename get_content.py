@@ -164,6 +164,7 @@ def parse_infotable(
 
         h1 {{
             color: #ffffff;
+            font-size: {font_size * 1.5}px;
         }}
     """
     head_tag = html_table.find("head")
@@ -172,7 +173,7 @@ def parse_infotable(
     return str(html_table)
 
 
-def get_json(station_id: int, table_type: tableType) -> str:
+def get_json(station_id: int, table_type: tableType) -> dict:
     url = assemble_url(station_id, table_type)
     response = requests.get(url)
     html_page = BeautifulSoup(response.content, features="lxml")
@@ -187,32 +188,28 @@ def get_json(station_id: int, table_type: tableType) -> str:
     page_title["style"] = "text-align: center"
     div.insert(0, page_title)
 
-    table_content: list = extract_content(page=html_page, type=table_type)
+    table_content, messages = extract_content(page=html_page, type=table_type)
     table_dictionary = dict()
-    message = None
 
     for line in table_content:
-        if len(line) == 1:
-            message = line[0]
-        else:
-            table_dictionary[line[2]] = {
-                "time": line[0],
-                "type": line[1],
-                "carrier": line[3],
-                "destination": line[4].capitalize(),
-                "direction": line[5],
-                "platform": line[6].replace("\xa0", ""),
-                "track": line[7].replace("\xa0", ""),
-                "delay": line[8],
-            }
+        table_dictionary[line[2]] = {
+            "time": line[0],
+            "type": line[1],
+            "carrier": line[3],
+            "destination": line[4].capitalize(),
+            "direction": line[5],
+            "platform": line[6].replace("\xa0", ""),
+            "track": line[7].replace("\xa0", ""),
+            "delay": line[8] if line[8] else "0",
+        }
 
     json_data = dict()
     json_data["station"] = html_page.find("span", {"class": "station_name"}).string
     json_data["infotable_type"] = tableType(table_type.value).name.capitalize()
     json_data["trains"] = table_dictionary
-    json_data["message"] = message
+    json_data["message"] = messages
 
-    return json.dumps(json_data)
+    return json_data
 
 
 if __name__ == "__main__":

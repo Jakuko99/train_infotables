@@ -60,7 +60,7 @@ def get_station(station_name: str, type: int = 2, font_size: int = 20) -> int:
 
 
 @app.get("/data/{station_name}")
-def get_data(station_name: str, type: int = 2) -> str:
+def get_data(station_name: str, type: int = 2) -> dict:
     try:
         station_id = StationIds[station_name.upper()].value
         type = tableType(type)
