@@ -1,21 +1,10 @@
-FROM python:latest AS dep-builder
+FROM python:3.10-slim-bullseye
 
-COPY requirements.txt /build/requirements.txt
-RUN pip wheel --no-deps -w /build/dist -r /build/requirements.txt
+# install deps
+COPY requirements.txt /app/requirements.txt
+RUN apt-get update && apt-get install -y libxml2 libxml2-dev libxslt-dev gcc python3-dev
+RUN pip install --no-cache-dir -r /app/requirements.txt
 
-FROM python:slim AS base
-
-COPY --from=dep-builder [ "/build/dist/*.whl", "/install/" ]
-RUN pip install --no-index /install/*.whl \
-    && rm -rf /install
-
-FROM python:latest as app-builder
-
-COPY . /build
-RUN pip wheel --no-deps -w /build/dist /build
-
-FROM base AS final
-
-COPY --from=app-builder [ "/build/dist/*.whl", "/install/" ]
-RUN pip install --no-index /install/*.whl \
-    && rm -rf /install
+# copy and install app code
+COPY . /app
+RUN pip install --no-deps /app
