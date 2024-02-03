@@ -1,5 +1,4 @@
 import requests
-import json
 from bs4 import BeautifulSoup
 from enum import Enum
 import os
