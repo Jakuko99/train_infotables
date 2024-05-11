@@ -13,12 +13,19 @@
     }
 
     form {
-        text-align: center;
+        text-align: center;        
     }
 
     body {
         background-color: #1e1848;
-        color: #ffffff;
+        color: #ffffff;        
+    }
+    
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 20%;
     }
 </style>
 
@@ -35,9 +42,9 @@
     }
 </script>
 
-<body>
-    <img src="file/header.png" alt="ŽSR logo" height="400">
-    <h1 style="text-align: center;">Informačné tabule</h1>
+<body>    
+    <img src="file/logo.png" alt="ŽSR logo" class="center">    
+    <h1 style="text-align: center; font-size: 45px;">Informačné tabule</h1>
     <form method="POST">
         <select>
             {% for enum_value in enum_values %}
