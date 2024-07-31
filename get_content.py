@@ -17,7 +17,7 @@ class tableTypeSk(Enum):
 
 
 def assemble_url(station_id: int, table_type: tableType) -> str:
-    web_url = f"https://aplikacie.zsr.sk/InfoTabule/StationDetail.aspx?id={station_id}&t={table_type.value}"
+    web_url = f"https://aplikacie.zsr.sk/TabuleZsr/StationDetail.aspx?id={station_id}&t={table_type.value}"
     return web_url
 
 

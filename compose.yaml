@@ -1,6 +1,6 @@
 services:
   rest_infotables:
-    image: traininfotables:0.1
+    image: traininfotables:0.2
     build:
       context: .
     container_name: rest_infotables
