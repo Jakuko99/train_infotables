@@ -194,6 +194,7 @@ def get_json(station_id: int, table_type: tableType) -> dict:
         table_dictionary[line[2]] = {
             "time": line[0],
             "type": line[1],
+            "number": line[2],
             "carrier": line[3],
             "destination": line[4].capitalize(),
             "direction": line[5],
