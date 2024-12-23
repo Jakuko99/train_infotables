@@ -72,6 +72,32 @@ def get_data(station_name: str, type: int = 2) -> dict:
     infotable = get_json(station_id, type)
     return infotable
 
+@app.get("/data/{station_name}/{index}")
+def get_data(station_name: str, index: int, type: int = 2) -> dict:
+    try:
+        station_id = StationIds[station_name.upper()].value
+        type = tableType(type)
+    except KeyError:
+        raise HTTPException(status_code=404, detail=f"Station {station_name} not found")
+    except ValueError:
+        type = tableType.DEPARTURES
+
+    infotable: dict = get_json(station_id, type)["trains"]
+    try:
+        return infotable.get(list(infotable.keys())[index])
+    except IndexError:
+        return {
+            "time": " ",
+            "type": " ",
+            "number": " ",
+            "carrier": " ",
+            "destination": " ",
+            "direction": " ",
+            "platform": " ",
+            "track": " ",
+            "delay": " ",
+        }
+
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8040)
