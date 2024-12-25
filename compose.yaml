@@ -1,9 +1,11 @@
 services:
   rest_infotables:
-    image: traininfotables:0.2
+    image: traininfotables:1.0
     build:
       context: .
     container_name: rest_infotables
+    labels:
+      - "com.centurylinklabs.watchtower.enable=false"
     restart: unless-stopped
     ports:
       - 8040:8040

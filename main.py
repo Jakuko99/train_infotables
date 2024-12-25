@@ -84,7 +84,9 @@ def get_data(station_name: str, index: int, type: int = 2) -> dict:
 
     infotable: dict = get_json(station_id, type)["trains"]
     try:
-        return infotable.get(list(infotable.keys())[index])
+        out = infotable.get(list(infotable.keys())[index])
+        out['delay'] = out['delay'] if out['delay'] != "0" else " "
+        return out 
     except IndexError:
         return {
             "time": " ",
