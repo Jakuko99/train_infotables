@@ -73,7 +73,7 @@ def get_data(station_name: str, type: int = 2) -> dict:
     return infotable
 
 @app.get("/data/{station_name}/{index}")
-def get_data(station_name: str, index: int, type: int = 2) -> dict:
+def get_data_index(station_name: str, index: int, type: int = 2) -> dict:
     try:
         station_id = StationIds[station_name.upper()].value
         type = tableType(type)
@@ -87,6 +87,58 @@ def get_data(station_name: str, index: int, type: int = 2) -> dict:
         out = infotable.get(list(infotable.keys())[index])
         out['delay'] = out['delay'] if out['delay'] != "0" else " "
         return out 
+    except IndexError:
+        return {
+            "time": " ",
+            "type": " ",
+            "number": " ",
+            "carrier": " ",
+            "destination": " ",
+            "direction": " ",
+            "platform": " ",
+            "track": " ",
+            "delay": " ",
+        }
+    
+@app.get("/data_lines/{station_name}")
+def get_data_table(station_name: str, count: int = 1, type: int = 2) -> dict:
+    try:
+        station_id = StationIds[station_name.upper()].value
+        type = tableType(type)
+    except KeyError:
+        raise HTTPException(status_code=404, detail=f"Station {station_name} not found")
+    except ValueError:
+        type = tableType.DEPARTURES
+
+    infotable: dict = get_json(station_id, type)
+    empty_line: dict = {
+            "time": " ",
+            "type": " ",
+            "number": " ",
+            "carrier": " ",
+            "destination": " ",
+            "direction": " ",
+            "platform": " ",
+            "track": " ",
+            "delay": " ",
+        }
+    try:
+        out: list = list()
+        index: int = 0
+        for value in infotable["trains"].values():
+            value['delay'] = value['delay'] if value['delay'] != "0" else " "
+            out.append(value)
+            index += 1
+
+            if index >= count:
+                break
+        
+        if len(out) < count:
+            for _ in range(count - len(out)):
+                out.append(empty_line)
+
+        return {"data": out, "station": infotable["station"], "message":infotable["message"]}
+        
     except IndexError:
         return {
             "time": " ",
