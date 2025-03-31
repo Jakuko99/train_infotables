@@ -174,7 +174,11 @@ def parse_infotable(
 
 def get_json(station_id: int, table_type: tableType) -> dict:
     url = assemble_url(station_id, table_type)
-    response = requests.get(url)
+    try:
+        response = requests.get(url)
+    except requests.ConnectionError:
+        return {}
+    
     html_page = BeautifulSoup(response.content, features="lxml")
     div = html_page.find("div", {"id": "ctl00_ContentPlaceHolderStranka_UpdatePanel1"})
 
