@@ -7,6 +7,7 @@ import os
 
 from station_ids import StationIds
 from get_content import tableType, get_infotable, get_json
+from train_map import save_map
 
 app = FastAPI(title="REST ZSR InfoTables")
 current_path = os.path.dirname(os.path.abspath(__file__))
@@ -151,6 +152,14 @@ def get_data_table(station_name: str, count: int = 1, type: int = 2) -> dict:
             "track": " ",
             "delay": " ",
         }
+
+@app.get("/map", response_class=HTMLResponse)
+def load_map(request: Request) -> HTMLResponse:
+    try:
+        save_map()        
+        return templates.TemplateResponse("map.html", {"request": request})
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 if __name__ == "__main__":

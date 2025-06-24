@@ -18,3 +18,4 @@ starlette==0.27.0
 soupsieve==2.3.2.post1
 typing_extensions==4.8.0
 uvicorn==0.24.0.post1
+folium==0.19.5

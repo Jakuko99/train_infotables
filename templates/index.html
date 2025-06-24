@@ -40,6 +40,10 @@
             window.location.href = "/station/" + station + "?type=2" + "&font_size=" + document.querySelector('input[name="font_size"]').value;
         }
     }
+
+    function viewMap() {
+        window.location.href = "/map";
+    }
 </script>
 
 <body>    
@@ -62,6 +66,7 @@
         <br>
         <br>
         <button type="button" onclick="viewStation()">Zobraziť</button>
+        <button type="button" onclick="viewMap()">Mapa vlakov</button>
     </form>
 </body>
 
