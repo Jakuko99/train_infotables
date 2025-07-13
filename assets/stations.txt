@@ -26,6 +26,10 @@
 172056>Bystricany
 173658>Bytca
 175356>Bytcica
+136663>Cifer
+158360>Chotin
+172957>Chrenovec
+151969>Chynorany
 181156>Cadca
 163261>Cata
 152009>Cecejovce
@@ -47,10 +51,6 @@
 147363>Dunajska Streda
 134460>Dvory nad Zitavou
 136937>Filakovo
-158360>Chotin
-172957>Chrenovec
-151969>Chynorany
-136663>Cifer
 133264>Galanta
 150169>Gan
 143834>Gasparovo
@@ -90,9 +90,9 @@
 149062>Komarno
 152462>Komjatice
 154161>Koniarovce
+135806>Kostolany nad Hornadom
 136002>Kosice
 161505>Koskovce
-135806>Kostolany nad Hornadom
 157560>Kozarovce
 131615>Kralova Lehota
 174755>Kralovany
