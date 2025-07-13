@@ -178,7 +178,7 @@ def get_json(station_id: int, table_type: tableType) -> dict:
         response = requests.get(url)
     except requests.ConnectionError:
         return {}
-    
+
     html_page = BeautifulSoup(response.content, features="lxml")
     div = html_page.find("div", {"id": "ctl00_ContentPlaceHolderStranka_UpdatePanel1"})
 

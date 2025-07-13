@@ -73,6 +73,7 @@ def get_data(station_name: str, type: int = 2) -> dict:
     infotable = get_json(station_id, type)
     return infotable
 
+
 @app.get("/data/{station_name}/{index}")
 def get_data_index(station_name: str, index: int, type: int = 2) -> dict:
     try:
@@ -86,8 +87,8 @@ def get_data_index(station_name: str, index: int, type: int = 2) -> dict:
     infotable: dict = get_json(station_id, type)["trains"]
     try:
         out = infotable.get(list(infotable.keys())[index])
-        out['delay'] = out['delay'] if out['delay'] != "0" else " "
-        return out 
+        out["delay"] = out["delay"] if out["delay"] != "0" else " "
+        return out
     except IndexError:
         return {
             "time": " ",
@@ -100,7 +101,8 @@ def get_data_index(station_name: str, index: int, type: int = 2) -> dict:
             "track": " ",
             "delay": " ",
         }
-    
+
+
 @app.get("/data_lines/{station_name}")
 def get_data_table(station_name: str, count: int = 1, type: int = 2) -> dict:
     try:
@@ -113,33 +115,37 @@ def get_data_table(station_name: str, count: int = 1, type: int = 2) -> dict:
 
     infotable: dict = get_json(station_id, type)
     empty_line: dict = {
-            "time": " ",
-            "type": " ",
-            "number": " ",
-            "carrier": " ",
-            "destination": " ",
-            "direction": " ",
-            "platform": " ",
-            "track": " ",
-            "delay": " ",
-        }
+        "time": " ",
+        "type": " ",
+        "number": " ",
+        "carrier": " ",
+        "destination": " ",
+        "direction": " ",
+        "platform": " ",
+        "track": " ",
+        "delay": " ",
+    }
     try:
         out: list = list()
         index: int = 0
         for value in infotable["trains"].values():
-            value['delay'] = value['delay'] if value['delay'] != "0" else " "
+            value["delay"] = value["delay"] if value["delay"] != "0" else " "
             out.append(value)
             index += 1
 
             if index >= count:
                 break
-        
+
         if len(out) < count:
             for _ in range(count - len(out)):
                 out.append(empty_line)
 
-        return {"data": out, "station": infotable["station"], "message":infotable["message"]}
-        
+        return {
+            "data": out,
+            "station": infotable["station"],
+            "message": infotable["message"],
+        }
+
     except IndexError:
         return {
             "time": " ",
@@ -153,10 +159,11 @@ def get_data_table(station_name: str, count: int = 1, type: int = 2) -> dict:
             "delay": " ",
         }
 
+
 @app.get("/map", response_class=HTMLResponse)
 def load_map(request: Request) -> HTMLResponse:
     try:
-        save_map()        
+        save_map()
         return templates.TemplateResponse("map.html", {"request": request})
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
