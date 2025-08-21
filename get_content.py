@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 from enum import Enum
 import os
 
-templates_path = f"{os.path.dirname(os.path.abspath(__file__))}/templates"
+TEMPLATES_PATH = f"{os.path.dirname(os.path.abspath(__file__))}/templates"
 
 
 class tableType(Enum):
@@ -99,7 +99,7 @@ def parse_infotable(
     ]
 
     table_columns = len(column_names_arrival)
-    with open(f"{templates_path}/info_table.html", "r", encoding="utf-8") as f:
+    with open(f"{TEMPLATES_PATH}/info_table.html", "r", encoding="utf-8") as f:
         page_code: str = f.read()
 
     html_table = BeautifulSoup(page_code, "html.parser")

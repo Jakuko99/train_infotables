@@ -9,14 +9,14 @@ from station_ids import StationIds
 from get_content import tableType, get_infotable, get_json
 from train_map import save_map
 
+CURRENT_PATH = os.path.dirname(os.path.abspath(__file__))
 app = FastAPI(title="REST ZSR InfoTables")
-current_path = os.path.dirname(os.path.abspath(__file__))
-templates = Jinja2Templates(directory=f"{current_path}/templates")
+templates = Jinja2Templates(directory=f"{CURRENT_PATH}/templates")
 
 
 @app.get("/")
 def index_page(request: Request) -> HTMLResponse:
-    enum_values = StationIds.__members__.keys()  # Replace YourEnum with your Enum name
+    enum_values = StationIds.__members__.keys()
     return templates.TemplateResponse(
         "index.html", context={"request": request, "enum_values": enum_values}
     )
@@ -24,12 +24,12 @@ def index_page(request: Request) -> HTMLResponse:
 
 @app.get("/favicon.ico")
 def get_favicon():
-    return FileResponse(f"{current_path}/assets/logo.png")
+    return FileResponse(f"{CURRENT_PATH}/assets/logo.png")
 
 
 @app.get("/file/{filename}")
 def get_file(filename: str):
-    return FileResponse(f"{current_path}/assets/{filename}")
+    return FileResponse(f"{CURRENT_PATH}/assets/{filename}")
 
 
 @app.get("/station_raw/{station_name}")
